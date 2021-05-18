@@ -967,12 +967,12 @@
                           document.getElementById("marquee").innerHTML = mytime;
                           document.getElementById("copy").innerHTML = mytime;
                           document.getElementById("node").innerHTML = mytime;
-                          // var utf8Name = getQueryVariable("username");
-                          // if (utf8Name != false) {
-                          //   var bufferContent = new Uint8Array(utf8Name);
-                          //   var gbkName = new TextDecoder('gbk').decode(bufferContent);
-                          //   document.getElementById("username").innerHTML = gbkName;
-                          // }
+                          var utf8Name = getQueryVariable("username");
+                          if (utf8Name != false) {
+                            var bufferContent = new Uint8Array(utf8Name);
+                            var gbkName = new TextDecoder('gbk').decode(bufferContent);
+                            document.getElementById("username").innerHTML = gbkName;
+                          }
                           document.getElementById("usertype").innerHTML = "本科生";
                           document.getElementById("userPasstext").innerHTML = "本科用户，入校授权有效！";
                         </script>
